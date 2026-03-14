@@ -141,3 +141,28 @@ margin-top:40px;
 
 </body>
 </html>
+<section class="hero">
+    <h1>Create Your Own Custom Gift</h1>
+    <p>Photo Frames • Custom Cups • Sketches • Memory Gifts</p>
+    <button id="orderBtn">Order Now</button>
+</section>
+
+<script>
+    document.getElementById('orderBtn').onclick = function() {
+        alert('धन्यवाद! हमारा ऑर्डर सिस्टम जल्द ही शुरू होगा। अभी के लिए आप हमसे संपर्क कर सकते हैं।');
+    };
+    
+    // नेविगेशन लिंक्स के लिए एक छोटा सा अलर्ट
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+        link.onclick = function(e) {
+            if(this.innerText !== "Home") {
+                e.preventDefault();
+                alert(this.innerText + ' वाला पेज अभी बनाया जा रहा है!');
+            }
+        }
+    });
+</script>
+
+</body>
+
